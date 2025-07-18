@@ -2,11 +2,14 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 18
     commands:
-      - echo "No dependencies for plain HTML"
+      - npm install
   build:
     commands:
-      - echo "No build step needed"
+      - npm run build
 artifacts:
+  base-directory: dist
   files:
     - '**/*'
